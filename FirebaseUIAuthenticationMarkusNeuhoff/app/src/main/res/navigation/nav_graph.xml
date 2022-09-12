@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.fragments.ListFragment"
+        android:label="People List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.fragments.EditFragment"
+        android:label="Edit Person"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="person"
+            app:argType="com.example.firebaseuiauthenticationmarkusneuhoff.data.Person" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.fragments.AddFragment"
+        android:label="Add Person"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/email_SignInFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.Email_SignInFragment"
+        android:label="fragment_email__sign_in"
+        tools:layout="@layout/fragment_email__sign_in" >
+        <action
+            android:id="@+id/action_email_SignInFragment_to_emailSignInSuccessFragment"
+            app:destination="@id/emailSignInSuccessFragment" />
+        <action
+            android:id="@+id/action_email_SignInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_email_SignInFragment"
+            app:destination="@id/email_SignInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_emailSignInSuccessFragment"
+            app:destination="@id/emailSignInSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailSignInSuccessFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.EmailSignInSuccessFragment"
+        android:label="fragment_email_sign_in_success"
+        tools:layout="@layout/fragment_email_sign_in_success" >
+        <action
+            android:id="@+id/action_emailSignInSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
