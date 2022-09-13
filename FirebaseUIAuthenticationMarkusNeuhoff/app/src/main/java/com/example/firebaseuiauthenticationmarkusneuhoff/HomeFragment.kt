@@ -40,6 +40,17 @@ class HomeFragment : Fragment() {
             }
         }
 
+        binding.button2.setOnClickListener {
+            if (user != null) {
+                val action = HomeFragmentDirections.actionHomeFragmentToGoogleSignInSuccessFragment()
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "No Account Found, Kindly Register", Toast.LENGTH_SHORT).show()
+                val action =  HomeFragmentDirections.actionHomeFragmentToGoogleSignInFragment()
+                findNavController().navigate(action)
+            }
+        }
+
         return binding.root
     }
 
