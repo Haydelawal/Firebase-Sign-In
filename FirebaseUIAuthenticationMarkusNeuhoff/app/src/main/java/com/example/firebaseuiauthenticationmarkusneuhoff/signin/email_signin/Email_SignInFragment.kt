@@ -1,4 +1,4 @@
-package com.example.firebaseuiauthenticationmarkusneuhoff
+package com.example.firebaseuiauthenticationmarkusneuhoff.signin.email_signin
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -14,9 +14,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 
 class Email_SignInFragment : Fragment() {

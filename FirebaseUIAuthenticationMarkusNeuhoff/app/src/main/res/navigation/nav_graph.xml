@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/email_SignInFragment"
-        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.Email_SignInFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.email_signin.Email_SignInFragment"
         android:label="fragment_email__sign_in"
         tools:layout="@layout/fragment_email__sign_in" >
         <action
@@ -69,10 +69,16 @@
         <action
             android:id="@+id/action_homeFragment_to_googleSignInSuccessFragment"
             app:destination="@id/googleSignInSuccessFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fbSignInSuccessFragment"
+            app:destination="@id/fbSignInSuccessFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fbLogInFragment"
+            app:destination="@id/fbLogInFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailSignInSuccessFragment"
-        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.EmailSignInSuccessFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.email_signin.EmailSignInSuccessFragment"
         android:label="fragment_email_sign_in_success"
         tools:layout="@layout/fragment_email_sign_in_success" >
         <action
@@ -83,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/googleSignInFragment"
-        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.GoogleSignInFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.google_sign_in.GoogleSignInFragment"
         android:label="fragment_google_sign_in"
         tools:layout="@layout/fragment_google_sign_in" >
         <action
@@ -95,11 +101,32 @@
     </fragment>
     <fragment
         android:id="@+id/googleSignInSuccessFragment"
-        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.GoogleSignInSuccessFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.google_sign_in.GoogleSignInSuccessFragment"
         android:label="fragment_google_sign_in_success"
         tools:layout="@layout/fragment_google_sign_in_success" >
         <action
             android:id="@+id/action_googleSignInSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fbLogInFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.fb_sign_in.FbLogInFragment"
+        android:label="fragment_fb_log_in"
+        tools:layout="@layout/fragment_fb_log_in" >
+        <action
+            android:id="@+id/action_fbLogInFragment_to_fbSignInSuccessFragment"
+            app:destination="@id/fbSignInSuccessFragment" />
+        <action
+            android:id="@+id/action_fbLogInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fbSignInSuccessFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.fb_sign_in.FbSignInSuccessFragment"
+        android:label="fragment_fb_sign_in_success"
+        tools:layout="@layout/fragment_fb_sign_in_success" >
+        <action
+            android:id="@+id/action_fbSignInSuccessFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

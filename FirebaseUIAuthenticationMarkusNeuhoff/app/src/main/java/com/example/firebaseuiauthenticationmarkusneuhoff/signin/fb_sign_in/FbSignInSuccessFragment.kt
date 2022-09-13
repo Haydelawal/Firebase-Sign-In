@@ -1,4 +1,4 @@
-package com.example.firebaseuiauthenticationmarkusneuhoff
+package com.example.firebaseuiauthenticationmarkusneuhoff.signin.fb_sign_in
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,17 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.firebaseuiauthenticationmarkusneuhoff.databinding.FragmentEmailSignInSuccessBinding
-import com.example.firebaseuiauthenticationmarkusneuhoff.databinding.FragmentHomeBinding
+import com.example.firebaseuiauthenticationmarkusneuhoff.databinding.FragmentFbSignInSuccessBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 
-class EmailSignInSuccessFragment : Fragment() {
-    private lateinit var _binding: FragmentEmailSignInSuccessBinding
-    private val binding get() = _binding!!
+class FbSignInSuccessFragment : Fragment() {
 
+    private lateinit var _binding: FragmentFbSignInSuccessBinding
+    private val binding get() = _binding!!
     private lateinit var mAuth: FirebaseAuth
 
     override fun onCreateView(
@@ -24,7 +23,7 @@ class EmailSignInSuccessFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentEmailSignInSuccessBinding.inflate(inflater, container, false)
+        _binding = FragmentFbSignInSuccessBinding.inflate(inflater, container, false)
 
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
@@ -34,7 +33,7 @@ class EmailSignInSuccessFragment : Fragment() {
             binding.password.text = user?.uid.toString()
 
             backButton.setOnClickListener {
-                val action = EmailSignInSuccessFragmentDirections.actionEmailSignInSuccessFragmentToHomeFragment()
+                val action = FbSignInSuccessFragmentDirections.actionFbSignInSuccessFragmentToHomeFragment()
                 findNavController().navigate(action)
             }
 
@@ -42,12 +41,10 @@ class EmailSignInSuccessFragment : Fragment() {
 
                 Firebase.auth.signOut()
 
-                val action = EmailSignInSuccessFragmentDirections.actionEmailSignInSuccessFragmentToHomeFragment()
+                val action = FbSignInSuccessFragmentDirections.actionFbSignInSuccessFragmentToHomeFragment()
                 findNavController().navigate(action)
             }
         }
-
-
 
         return binding.root
     }

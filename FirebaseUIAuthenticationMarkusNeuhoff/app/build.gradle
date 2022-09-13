@@ -81,6 +81,10 @@ dependencies {
 
     // google sign in
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
+
+    // fb sign in
+    implementation 'com.facebook.android:facebook-login:latest.release'
+    
 }
 
 kapt {

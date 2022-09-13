@@ -1,4 +1,4 @@
-package com.example.firebaseuiauthenticationmarkusneuhoff
+package com.example.firebaseuiauthenticationmarkusneuhoff.signin.google_sign_in
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.firebaseuiauthenticationmarkusneuhoff.R
 import com.example.firebaseuiauthenticationmarkusneuhoff.databinding.FragmentGoogleSignInBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -94,7 +95,7 @@ class GoogleSignInFragment : Fragment() {
                     Log.d("GSI", "success ${mAuth.uid}")
                     val user = mAuth.currentUser
 
-                    val action = GoogleSignInFragmentDirections.actionGoogleSignInFragmentToGoogleSignInSuccessFragment()
+                    val action =GoogleSignInFragmentDirections.actionGoogleSignInFragmentToGoogleSignInSuccessFragment()
                     findNavController().navigate(action)
                 } else {
                     // if sign in fails

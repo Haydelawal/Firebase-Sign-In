@@ -51,6 +51,17 @@ class HomeFragment : Fragment() {
             }
         }
 
+        binding.button3.setOnClickListener {
+            if (user != null) {
+                val action = HomeFragmentDirections.actionHomeFragmentToFbSignInSuccessFragment()
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "No Account Found, Kindly Register", Toast.LENGTH_SHORT).show()
+                val action =  HomeFragmentDirections.actionHomeFragmentToFbLogInFragment()
+                findNavController().navigate(action)
+            }
+        }
+
         return binding.root
     }
 
