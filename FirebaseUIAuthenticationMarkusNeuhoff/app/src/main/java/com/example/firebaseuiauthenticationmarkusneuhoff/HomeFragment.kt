@@ -62,6 +62,17 @@ class HomeFragment : Fragment() {
             }
         }
 
+
+        binding.button5.setOnClickListener {
+            if (user != null) {
+                val action = HomeFragmentDirections.actionHomeFragmentToPhoneLogInSuccessFragment()
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "No Account Found, Kindly Register", Toast.LENGTH_SHORT).show()
+                val action =  HomeFragmentDirections.actionHomeFragmentToPhoneLogInFragment()
+                findNavController().navigate(action)
+            }
+        }
         return binding.root
     }
 
