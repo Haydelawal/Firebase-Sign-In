@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/LAWAL/AndroidStudioProjects/FirebaseUIAuthenticationMarkusNeuhoff/app/src/main/res/drawable/edit_text_bg.xml" value="0.1595" />
+        <entry key="..\:/Users/LAWAL/AndroidStudioProjects/FirebaseUIAuthenticationMarkusNeuhoff/app/src/main/res/layout/fragment_anon_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/LAWAL/AndroidStudioProjects/FirebaseUIAuthenticationMarkusNeuhoff/app/src/main/res/layout/fragment_anon_sign_in_sucess.xml" value="0.25" />
         <entry key="..\:/Users/LAWAL/AndroidStudioProjects/FirebaseUIAuthenticationMarkusNeuhoff/app/src/main/res/layout/fragment_email__sign_in.xml" value="0.25" />
         <entry key="..\:/Users/LAWAL/AndroidStudioProjects/FirebaseUIAuthenticationMarkusNeuhoff/app/src/main/res/layout/fragment_email_sign_in_success.xml" value="0.25" />
         <entry key="..\:/Users/LAWAL/AndroidStudioProjects/FirebaseUIAuthenticationMarkusNeuhoff/app/src/main/res/layout/fragment_fb_log_in.xml" value="0.25" />

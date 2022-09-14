@@ -104,7 +104,6 @@ class TwitterLogInFragment : Fragment() {
                         Toast.makeText(requireContext(), "2 E", Toast.LENGTH_SHORT).show()
                         Log.d(myTag, "2 E = ${it.toString()}")
 
-
                     })
         }
 

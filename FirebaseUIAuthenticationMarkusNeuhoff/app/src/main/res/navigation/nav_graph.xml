@@ -90,6 +90,12 @@
         <action
             android:id="@+id/action_homeFragment_to_twitterLogInSuccessFragment"
             app:destination="@id/twitterLogInSuccessFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_anonSignInFragment"
+            app:destination="@id/anonSignInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_anonSignInSucessFragment"
+            app:destination="@id/anonSignInSucessFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailSignInSuccessFragment"
@@ -204,6 +210,27 @@
         tools:layout="@layout/fragment_twitter_log_in_success" >
         <action
             android:id="@+id/action_twitterLogInSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anonSignInFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.anonymous_sign_in.AnonSignInFragment"
+        android:label="fragment_anon_sign_in"
+        tools:layout="@layout/fragment_anon_sign_in" >
+        <action
+            android:id="@+id/action_anonSignInFragment_to_anonSignInSucessFragment"
+            app:destination="@id/anonSignInSucessFragment" />
+        <action
+            android:id="@+id/action_anonSignInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anonSignInSucessFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.anonymous_sign_in.AnonSignInSucessFragment"
+        android:label="fragment_anon_sign_in_sucess"
+        tools:layout="@layout/fragment_anon_sign_in_sucess" >
+        <action
+            android:id="@+id/action_anonSignInSucessFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

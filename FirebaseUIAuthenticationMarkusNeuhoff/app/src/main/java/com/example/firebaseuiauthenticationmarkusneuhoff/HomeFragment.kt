@@ -84,6 +84,17 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(action)
             }
         }
+
+        binding.button6.setOnClickListener {
+            if (user != null) {
+                val action = HomeFragmentDirections.actionHomeFragmentToAnonSignInFragment()
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "No Account Found, Kindly Register", Toast.LENGTH_SHORT).show()
+                val action =  HomeFragmentDirections.actionHomeFragmentToAnonSignInSucessFragment()
+                findNavController().navigate(action)
+            }
+        }
         return binding.root
     }
 
