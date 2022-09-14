@@ -84,6 +84,12 @@
         <action
             android:id="@+id/action_homeFragment_to_phoneLogInSuccessFragment"
             app:destination="@id/phoneLogInSuccessFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_twitterLogInFragment"
+            app:destination="@id/twitterLogInFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_twitterLogInSuccessFragment"
+            app:destination="@id/twitterLogInSuccessFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailSignInSuccessFragment"
@@ -178,5 +184,26 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/twitterLogInFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.twitter_sign_in.TwitterLogInFragment"
+        android:label="fragment_twitter_log_in"
+        tools:layout="@layout/fragment_twitter_log_in" >
+        <action
+            android:id="@+id/action_twitterLogInFragment_to_twitterLogInSuccessFragment"
+            app:destination="@id/twitterLogInSuccessFragment" />
+        <action
+            android:id="@+id/action_twitterLogInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twitterLogInSuccessFragment"
+        android:name="com.example.firebaseuiauthenticationmarkusneuhoff.signin.twitter_sign_in.TwitterLogInSuccessFragment"
+        android:label="fragment_twitter_log_in_success"
+        tools:layout="@layout/fragment_twitter_log_in_success" >
+        <action
+            android:id="@+id/action_twitterLogInSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
